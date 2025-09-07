@@ -1,0 +1,215 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
+
+.services-title {
+  position: relative;
+}
+
+.services-title h1 {
+  padding: 0px 30px;
+  font-size: 70px;
+  font-weight: 600;
+}
+
+.services-title img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.services-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid white;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.services-format h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.services-format h2 {
+  font-size: 30px;
+  font-weight: 800;
+  background: linear-gradient(
+    267deg,
+    rgb(175, 175, 119) 0.36%,
+    #00a8a8 102.06%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-format p {
+  color: whitesmoke;
+  font-size: 20px;
+  line-height: 40px;
+  max-width: 300px;
+}
+
+.services-readmore {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-format:hover {
+  border: 2px solid #75eeb3;
+
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+@media (max-width: 768px) {
+  .services {
+    align-items: start;
+    gap: 70px;
+    margin: 20px 70px;
+  }
+
+  .services-title h1 {
+    padding: 0;
+    font-size: 50px;
+  }
+
+  .services-format {
+    gap: 20px;
+    padding: 32px;
+  }
+  .services-format h2 {
+    font-size: 28px;
+  }
+
+  .services-format p {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 300px;
+  }
+
+  .services-readmore img {
+    width: 20px;
+  }
+  .services-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* phone */
+@media (max-width: 480px) {
+  .services {
+    margin: 20px 20px; /* Reduced margin */
+    gap: 40px; /* Reduced gap */
+  }
+
+  .services-title h1 {
+    font-size: 30px; /* Smaller title */
+  }
+
+  .services-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 20px; /* Reduced gap */
+    margin-bottom: 40px;
+  }
+
+  .services-format {
+    padding: 20px; /* Reduced padding */
+    gap: 15px; /* Reduced gap */
+  }
+
+  .services-format h3 {
+    font-size: 20px; /* Smaller heading */
+  }
+
+  .services-format h2 {
+    font-size: 24px; /* Smaller heading */
+  }
+
+  .services-format p {
+    font-size: 16px; /* Smaller font */
+    line-height: 24px; /* Adjusted line height */
+    max-width: 100%; /* Make paragraph full width */
+  }
+
+  .services-readmore {
+    margin-top: 15px; /* Reduced margin */
+    gap: 15px;
+  }
+
+  .services-readmore p {
+    font-size: 14px;
+  }
+
+  .services-readmore img {
+    width: 16px; /* Smaller icon */
+  }
+}
+
+@media (max-width: 320px) {
+  .services {
+    margin: 15px 15px; /* Further reduced margin */
+    gap: 30px; /* Further reduced gap */
+  }
+
+  .services-title h1 {
+    font-size: 24px; /* Even smaller title */
+  }
+
+  .services-title img {
+    width: 90%;
+    left: 5%;
+  }
+
+  .services-format {
+    padding: 15px; /* Further reduced padding */
+    gap: 10px; /* Further reduced gap */
+  }
+
+  .services-format h3 {
+    font-size: 18px; /* Even smaller heading */
+  }
+
+  .services-format h2 {
+    font-size: 20px; /* Even smaller heading */
+  }
+
+  .services-format p {
+    font-size: 14px; /* Even smaller font */
+    line-height: 20px; /* Adjusted line height */
+  }
+
+  .services-readmore {
+    margin-top: 10px; /* Further reduced margin */
+    gap: 10px;
+  }
+
+  .services-readmore p {
+    font-size: 12px;
+  }
+
+  .services-readmore img {
+    width: 14px; /* Even smaller icon */
+  }
+}

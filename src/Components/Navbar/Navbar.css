@@ -1,0 +1,141 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+
+.navbar-logo {
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 2px;
+  margin-left: 50px;  
+}
+
+.navbar .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 50px;
+  font-size: 18px;
+}
+
+.nav-connect {
+  padding: 20px 25px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, rgb(175, 175, 119) 0.36%, #00a8a8 102.06%);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-left: 30px;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+.nav-menu li {
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+  cursor: pointer;
+}
+
+.nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+.nav-mob-close {
+  display: none;
+}
+
+.nav-mob-open {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+  .nav-connect {
+    display: none;
+  }
+  .nav-mob-open {
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Keeps it at the top-right */
+    width: 30px;
+    cursor: pointer;
+    z-index: 3;
+  }
+
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    right: -350px;
+    gap: 30px;
+    background-color: black;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    padding-top: 60px; /* Ensures space for the close button */
+  }
+
+  .nav-menu li {
+    font-size: 24px; /* Slightly reduced for better spacing */
+    padding-left: 50px; /* Adjusted to prevent overlap */
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+/* phone */
+/* Media Query for 320px - 480px */
+/* Media Query for 320px - 480px */
+@media (max-width: 480px) and (min-width: 320px) {
+  .navbar {
+    margin: 20px 20px; /* Reduce margin for smaller screens */
+  }
+
+  .navbar-logo {
+    height: 50px; /* Reduce logo size for smaller screens */
+  }
+
+  .nav-mob-open {
+    right: 20px; /* Adjust position for smaller screens */
+    width: 30px; /* Reduce size of the menu open icon */
+  }
+
+  .nav-menu {
+    right: -100%; /* Hide menu completely off-screen */
+    width: 100%; /* Full width for smaller screens */
+    padding-top: 50px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-menu li {
+    font-size: 20px; /* Reduce font size for smaller screens */
+    padding-left: 30px; /* Adjust padding for smaller screens */
+  }
+
+  .nav-mob-close {
+    top: 10px; /* Adjust close button position */
+    right: 10px; /* Adjust close button position */
+    width: 25px; /* Reduce close button size */
+  }
+}
